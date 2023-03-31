@@ -1,0 +1,333 @@
+ /* Statistics Page styles */
+    
+    /* General styling */
+    body 
+    {
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple color Emoji", "Segoe UI Emoji";
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    }
+
+    .container-fluid 
+    {
+    padding: 0;
+    display: grid;
+
+    }
+
+    .logo img 
+    {
+    margin: 8px 16px;
+    float: left;
+    border-radius: 8px 3px 8px ;
+    box-shadow: 8px 3px 8px rgba(0, 0, 0, 1);
+    width: 75px;
+    height: 75px;
+    }
+
+    header 
+    {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5px;
+    background: grey linear-gradient(rgba(0,0,0,0.07),rgba(0,0,0,0.2));
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    h1 
+    {
+    font-weight: bold;
+    text-align: center;
+    }
+
+    ul 
+    {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    a {
+    text-decoration: none;
+    color: #007bff;
+    }
+
+    a:hover 
+    {
+    text-decoration: underline;
+    }
+
+    /* Sidebar styling */
+
+    .sidebar 
+    {
+    position: fixed;
+    top: 97px;
+    bottom: 10px;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: grey linear-gradient(rgba(0,0,0,0.07),rgba(0,0,0,0.2));
+    color: #fff;
+    }
+
+    .sidebar-sticky
+        {
+    position: relative;
+    top: 0;
+    }
+
+    .nav-link.active
+        {
+    color: #fff;
+    background-color: goldenrod;
+    }
+
+    /* Main content styling */
+
+    main 
+    {
+    padding: 0;
+    margin-top: 100px;
+    
+    }
+
+    section 
+    {
+    margin-bottom: 40px;
+    }
+
+    /* Responsive styling */
+
+    @media (min-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    main {
+        margin-left: 10px;
+        
+    }
+    }
+
+    @media (max-width: 767px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    main {
+        margin-top: 200px;
+    }
+    }
+
+    @media (max-width: 576px) {
+        header {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .logo {
+            margin-bottom: 0.25rem;
+        }
+
+        h1 {
+            font-size: 1rem;
+            text-align: center;
+        }
+    
+        
+    }
+
+    /* Footer styles for small screens */
+    @media (max-width: 576px) 
+    {
+        footer {
+            padding: 0.25rem;
+        }
+        footer .row {
+            flex-direction: column;
+            align-items: left;
+        }
+        footer hr.short_hr {
+            width: 50px;
+        }
+        footer a {
+            margin: 0.5rem 0;
+            font-size: small;
+        }
+        footer .copyrights {
+            margin: 0.5rem 0;
+            text-align: center;
+            font-size: 0.7em;
+        }
+        
+    }
+
+        /* Header styles for small screens */
+    @media (max-width: 576px) 
+    {
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            padding: 0.25rem;
+            margin: 0;
+        }
+        header .logo img {
+            width: 50%;
+            max-width: 90px;
+            height: 40px;
+        }
+        header h1 {
+            font-size: 1rem;
+            margin-top: 0.25rem;
+            text-align: left;
+        }
+    }
+
+        /* Main section styles for small screens */
+    @media (max-width: 576px) 
+    {
+        main {
+            padding: 0.25rem;
+            top: 0; 
+            margin-top: 90px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            width: 100px;
+            justify-content: center;
+            height: 100vh;
+        }
+        main .graph-container {
+            flex-direction: column;
+            align-items: center;
+            width: 345px;
+            height: 400px;
+                
+        }
+        main .graph-container iframe {
+            width: 337px;
+            height: 380px;
+        }
+        main footer {
+            margin-top: 1rem;
+            text-align: left;
+            font-size: small;
+
+        }
+    }
+
+    @media (max-width: 576px) {
+        section {
+            font-size: 0.8em;
+            margin-bottom: 0;
+                /* decrease font size */
+        }
+        
+        section h2 {
+            font-size: 1em; /* decrease font size */
+        }
+        
+        section ul {
+            list-style: none; /* remove bullet points */
+            margin: 0;
+            padding: 0;
+            font-size: 1em;
+        }
+        
+        section li {
+            margin-bottom: 0em;
+            font-size: 1em; /* add some space between list items */
+        }
+    }
+
+    @media (max-width: 767px) 
+    {
+        .container-fluid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5px;
+            justify-content: end;
+
+        }
+    }
+
+
+    .logo img 
+    {
+    margin: 8px 17px;
+    border-radius: 8px 3px 8px ;
+    box-shadow: 8px 3px 8px rgba(0, 0, 0, 1);
+    width: 80px;
+    height: 80px;
+    }
+
+    h1 
+    {
+        margin-bottom: 0;
+
+    }
+
+    .graph-container 
+    {
+        margin-right: 0;
+        padding: 10px;
+        height: 950;
+        width: 700;
+    }
+
+    /* styles for the three containers */
+    .graph-container 
+    {
+        border: 1px solid #ddd; /* add a border */
+        background-color: rgba(0, 0, 0, 0.2); /* add a background color */
+        padding: 5px; /* add some padding */
+        margin-bottom: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        
+        /* add a margin at the bottom to separate them */
+    }
+
+    @media (max-width: 967px) {
+        .graph-container 
+        {
+            margin-right: 0;
+            height: 150px;
+            width: 150px;
+            /* remove right margin */
+        }
+    }
+
+    .graph-container iframe {
+        width: 1250px; 
+        height: 650px;
+        border: none;
+
+    }   
+    
+    /* adjust styles for screens smaller than 768px */
+    @media (max-width: 967px) {
+        .graph-container iframe {
+        width: 100px; /* set width to 100% of parent container */
+        height: 100px;
+        margin-right:0; /* set height to auto to maintain aspect ratio */
+    }}
+    
+
